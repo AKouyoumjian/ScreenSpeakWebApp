@@ -1,0 +1,36 @@
+Profile Implementation:
+
+Structure:
+- User Profile Page 
+mapped to "/profile"
+
+    - Contains:
+
+        Public Available info:
+            - name
+            - followers (list of users)
+            - following (list of users)
+            - bio
+            - profile picture
+            - DEPENDING ON USER GROUP: 
+                
+                Typical User:
+                    - reviews
+                    - likes/favorites/bookmarks
+
+                Director:
+                    - added movies/showtimes
+                    - responses to reviews
+
+
+        Private Information (only visible to this user when signed in)
+            - email address
+            - phone number
+            - address?
+
+
+
+- Other Profile Page:
+mapped to "/profile/{profileId}"
+
+- Displays "Publicly Available Info" only.

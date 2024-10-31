@@ -1,0 +1,358 @@
+body {
+ margin: 0;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ background-color: black;
+ text-decoration: none;
+}
+
+code {
+ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.nav {
+ display: flex;
+ width: auto;
+ flex-wrap: wrap;
+ padding-left: 0;
+ margin-bottom: 0;
+ list-style: none;
+ background-color: #242424;
+}
+
+.nav-linkx {
+ display: block;
+ padding: 0.5rem 1rem;
+ color: #bff3c5;
+ text-decoration: none;
+ border-radius: 0%;
+ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out;
+}
+.nav-linkx:hover {
+ display: block;
+ padding: 0.5rem 1rem;
+ color: #bff3c5;
+ background-color: #393939;
+ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out;
+}
+.add {
+ background-color: white;
+ height: 500px;
+ width: 700px;
+ border-style: solid;
+ border-width: 2px;
+ border-radius: 15px;
+ padding: 2rem;
+ position: fixed;
+ top: 20%;
+ left: 15vw;
+}
+.book {
+ border-width: 0px;
+}
+
+.not-ac {
+ color: rgba(100, 100, 100, 0.2);
+}
+
+.btnx {
+ display: block;
+ background: #bff3c5;
+ cursor: pointer;
+ border-radius: 14px;
+ height: 32px;
+}
+
+.btnx:disabled {
+ display: block;
+ background: #99c49e;
+ cursor: pointer;
+ border-radius: 14px;
+ height: 32px;
+ color: #393939;
+ border-color: #595858;
+}
+
+button:active {
+ box-shadow: inset 0px 0px 80px 0px rgba(0, 0, 0, 0.2);
+}
+a {
+ text-decoration: none;
+ color: #393939;
+}
+.col {
+ color: #393939;
+}
+.bg-main {
+ background-color: #eeeeee;
+ min-height: 100vh;
+ height: 100%;
+ padding-bottom: 10px;
+}
+.page-title {
+ font-weight: 500;
+ font-size: xx-large;
+ margin-left: 10px;
+}
+.peek {
+ text-decoration: none;
+}
+.outline {
+ border: #242424 2px;
+ border-style: solid;
+}
+.link {
+ text-decoration: none;
+ color: #242424;
+}
+.round {
+ border-radius: 14px;
+ position: relative;
+ display: block;
+ padding: var(--bs-list-group-item-padding-y)
+  var(--bs-list-group-item-padding-x);
+ color: var(--bs-list-group-color);
+ text-decoration: none;
+ background-color: var(--bs-list-group-bg);
+ border: var(--bs-list-group-border-width) solid
+  var(--bs-list-group-border-color);
+}
+a {
+ text-decoration: none;
+}
+
+.container.sign1 {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ background-color: #242424;
+ width: auto;
+}
+
+.background-sign {
+ background-color: #242424;
+}
+
+.form-group.sign {
+ margin-bottom: 25px;
+ width: 300px;
+}
+
+.container.sign {
+ width: auto;
+ height: 100%;
+ padding: 50px;
+ border-radius: 4px;
+ background-color: transparent;
+ border: 2px solid #bff3c5;
+}
+
+.webtitle {
+ margin-bottom: 30px;
+ color: #bff3c5;
+}
+
+.btn-sign {
+ width: 200px;
+ height: 40px;
+ border-radius: 4px;
+ border: 2px solid black;
+ background-color: #bff3c5;
+}
+
+.sign-sent {
+ color: #bff3c5;
+}
+
+.sign-link {
+ text-decoration: none;
+}
+
+.home.list-group {
+ width: 100%;
+ margin-bottom: 40px;
+}
+
+.home li {
+ margin-bottom: 0px;
+}
+
+.home .list-group-item {
+ background-color: #bff3c5;
+ width: 100%;
+ border-bottom: 1px solid #242424;
+}
+
+.home .list-group-item.active {
+ background-color: #242424;
+ display: flex;
+}
+
+.viewButton {
+ color: #242424;
+ border: none;
+ background-color: #bff3c5;
+ width: 100%;
+ text-align: left;
+}
+
+.homeDetails {
+ text-decoration: none;
+ color: black;
+}
+.form-check.sign {
+ color: #bff3c5;
+}
+
+.poster-size {
+ width: 75px;
+ height: 122.5px;
+}
+
+.poster-display-flex {
+ flex-grow: 0;
+ flex-shrink: 0;
+ width: 75px;
+}
+
+.upcomingMoviesContainer {
+ display: flex;
+}
+
+.details-display-flex {
+ flex-grow: 1;
+ padding-left: 10px;
+}
+
+.star-icon {
+ color: #ffd700;
+ text-align: left;
+ font-size: 14px;
+ margin-right: 5px;
+ padding-top: 4px;
+}
+
+.movie-rating {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: left;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+
+.row.movie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left; 
+  gap: 1rem; 
+  --bs-gutter-x: 0;
+}
+
+.movie-card {
+  flex: 0 0 220px; 
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column; 
+  align-items: left; 
+  background-color: #99c49e; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.movie-poster {
+  width: 100%; 
+  height: auto; 
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px; 
+}
+
+.movie-info {
+  padding: 10px;
+  text-align: left;
+  width: 100%; 
+}
+
+.movie-title {
+  font-size: 20px;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.movie-release-date {
+  font-size: 14px;
+  color: #666;
+  
+}
+
+.btn.btn-primary.view-details:hover {
+  background-color: #0056b3;
+}
+
+.movie-link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Inherits text color from parent */
+}
+
+.page-button-left{
+  background-color: #bff3c5;
+  color: black;
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 60px;
+}
+
+.page-button-right{
+  background-color: #bff3c5;
+  color: black;
+  border-radius: 10px;
+  margin-left: 20px;
+  width: 60px;
+}
+
+.page-button-current{
+  background-color: #242424;
+  color: white;
+  border-radius: 10px;
+  width: 60px;
+}
+
+.movieHeading{
+  font-weight: bold;
+  font-size: 40px;
+  margin-left: 0px;
+}
+
+ul.pagination{
+  text-decoration: none;
+  --bs-pagination-color: black;
+  --bs-pagination-bg: #bff3c5;
+}
+
+.pagination .page-link:hover {
+  background-color: #bff3c5; 
+  color: black; 
+  cursor: pointer; 
+
+}
+
+
+.delete{
+  float:right;
+}
+
+.people-trending{
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 600;
+}
+
+.page-item.active .page-link {
+  background-color: #242424; 
+  color: white; 
+  border-radius: 3px; 
+}
