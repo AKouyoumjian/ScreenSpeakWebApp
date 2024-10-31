@@ -1,9 +1,8 @@
 import Nav from "../Nav";
-import { HashRouter, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Routes, Route, Navigate } from "react-router";
-import React, { Component } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React from "react";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
@@ -114,9 +113,12 @@ function Details() {
   setOpen(true);
  };
 
+ // initial get info and reviews on load of the component.
+ // only called on inital mount so suppress warning.
  useEffect(() => {
   getInfo();
   fetchReviews();
+  // eslint-disable-next-line
  }, []);
 
  return (
@@ -183,7 +185,7 @@ function Details() {
       </div>
       <div class="list-group">
        {reviews
-        .filter((r) => r.movie_id == id)
+        .filter((r) => r.movie_id === id)
         .map((rev) => (
          <Review
           id={rev._id}

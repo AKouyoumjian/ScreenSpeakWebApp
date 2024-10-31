@@ -18,17 +18,13 @@ function Profile() {
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState();
 
-  // generate a list of followers and following from the indices in the user object
-  const [followers, setFollowers] = useState([]);
-  const [following, setFollowing] = useState([]);
-
+  // fetch and set the users. Also set current user.
   const fetchUsers = async () => {
     const fetchedUsers = await uClient.findAllUsers();
     await setUsers(fetchedUsers);
     if (uId) {
+      // set current user
       await setUser(fetchedUsers.find((user) => user.id === uId));
-      await setFollowers(fetchedUsers.filter((u) => u.following.includes(uId)));
-      await setFollowing(fetchedUsers.filter((u) => u.followers.includes(uId)));
     }
   };
 
@@ -57,7 +53,6 @@ function Profile() {
   useEffect(() => {
     if (!uId) {
       setUser(currentUser);
-      isOwnProfile = true;
     }
   }, [uId, currentUser]);
 
@@ -81,6 +76,7 @@ function Profile() {
     fetchReviews();
     fetchResponses();
     fetchUsers();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [uId]);
 
   const handleFollow = async () => {

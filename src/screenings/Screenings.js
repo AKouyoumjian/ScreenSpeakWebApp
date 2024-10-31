@@ -1,5 +1,3 @@
-import { HashRouter } from "react-router-dom";
-import { Routes, Route, Navigate } from "react-router";
 import Nav from "../Nav";
 import Screening from "./Screening";
 import { useEffect, useState } from "react";

@@ -65,9 +65,10 @@ function Screening(props) {
  };
 
  useEffect(() => {
-  getInfo();
-  fetchScreenings();
-  fetchUsers();
+   getInfo();
+   fetchScreenings();
+   fetchUsers();
+   // eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
  return (
   <li class="round  my-1">

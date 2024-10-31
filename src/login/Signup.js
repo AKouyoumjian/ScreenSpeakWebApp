@@ -87,7 +87,7 @@ function Signup() {
     const updatedCredentials = { ...credentials, id: idString };
     setCredentials(updatedCredentials);
     setCurrentUser(updatedCredentials);
-  }, [])
+  }, [credentials])
   return (
     <div className="background-sign">
       <Nav />

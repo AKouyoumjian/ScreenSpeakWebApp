@@ -1,19 +1,20 @@
 import { setCurrentUser } from "./UserReducer";
 import * as client from "./client";
 import { useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 function CurrentUser({ children }) {
- const [user, setUser] = useState(null);
  const dispatch = useDispatch();
  const fetchUser = async () => {
   try {
    const user = await client.account();
-   setUser(user);
    dispatch(setCurrentUser(user));
   } catch (error) {}
  };
+
+ // call fetchUser once when the component mounts, suppress the dep array warning.
  useEffect(() => {
-  fetchUser();
+   fetchUser();
+   // eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
  return (
   <div>

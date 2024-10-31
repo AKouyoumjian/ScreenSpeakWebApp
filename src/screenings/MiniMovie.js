@@ -27,8 +27,10 @@ function MiniMovie(props) {
    });
  };
 
+ // get info on load of component, suppress warning for useEffect
  useEffect(() => {
   getInfo();
+  // eslint-disable-next-line
  }, []);
  return (
   <li class="round my-1 mx-1">

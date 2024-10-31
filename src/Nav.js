@@ -1,8 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import UserReducer from "./login/UserReducer";
 import { useSelector } from "react-redux";
 import * as client from "./login/client";
-import { useEffect } from "react";
 import { setCurrentUser } from "./login/UserReducer";
 import { useDispatch } from "react-redux";
 function Nav() {
@@ -10,11 +8,7 @@ function Nav() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { currentUser } = useSelector((state) => state.UserReducer);
-  let currentUserId = "noUser";
 
-  if (currentUser) {
-    currentUserId = currentUser.id;
-  }
   const signout = async () => {
     await client.signout();
     dispatch(setCurrentUser(null));

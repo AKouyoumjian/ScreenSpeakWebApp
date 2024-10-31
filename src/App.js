@@ -1,6 +1,6 @@
 import "./App.css";
 import { HashRouter } from "react-router-dom";
-import { Routes, Route, Navigate } from "react-router";
+import { Routes, Route } from "react-router";
 import Home from "./home/Home";
 import Screenings from "./screenings/Screenings";
 import Search from "./search/Search";
