@@ -67,7 +67,7 @@ function Signin() {
             <div className="form-group sign">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Username"
                 value={credentials.username}
                 onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
@@ -76,7 +76,7 @@ function Signin() {
             <div className="form-group sign">
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 placeholder="Password"
                 value={credentials.password}
                 onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
@@ -90,7 +90,7 @@ function Signin() {
               </a>
             </p>
             <div className="d-flex justify-content-center">
-              <button type="submit" class="btn-sign" onClick={signin}>
+              <button type="submit" className="btn-sign" onClick={signin}>
                 Login
               </button>
             </div>

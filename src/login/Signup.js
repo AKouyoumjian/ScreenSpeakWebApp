@@ -105,7 +105,7 @@ function Signup() {
             <div className="form-group sign">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Username"
                 value={credentials.username}
                 onChange={(e) => setCredentials({ ...credentials, username: e.target.value })}
@@ -114,7 +114,7 @@ function Signup() {
             <div className="form-group sign">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Name"
                 value={credentials.name}
                 onChange={(e) => setCredentials({ ...credentials, name: e.target.value })}
@@ -123,7 +123,7 @@ function Signup() {
             <div className="form-group sign">
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 placeholder="Email"
                 value={credentials.email}
                 onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
@@ -132,21 +132,21 @@ function Signup() {
             <div className="form-group sign">
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 placeholder="Password"
                 value={credentials.password}
                 onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
               />
             </div>
             <div className="form-group sign">
-                <input
-                  type="password"
-                  className="form-control"
-                  placeholder="Confirm Password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)} // Update the confirmPassword state
-                />
-              </div>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Confirm Password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)} // Update the confirmPassword state
+              />
+            </div>
             <div className="mb-3">
               <div className="form-check sign">
                 <input
@@ -186,7 +186,7 @@ function Signup() {
               </a>
             </p>
             <div className="d-flex justify-content-center">
-              <button type="submit" class="btn-sign" onClick={signup}>
+              <button type="submit" className="btn-sign" onClick={signup}>
                 Sign Up
               </button>
             </div>

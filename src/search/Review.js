@@ -51,74 +51,62 @@ function Review(props) {
  }, []);
 
  return (
-  <li class="round  my-1">
-   <div class="grid row d-flex align-items-center">
-    <div class="my-2 peek ">
-     <div class="d-flex">
-      <i
-       className="fa fa-comment fa-flip-horizontal"
-       style={{ color: "#229660" }}
-      ></i>
-      {user && (
-       <Link to={`/profile/${user.id}`}>
-        {" "}
-        <h6 class="mx-2 my-0 col">{props.user}</h6>
-       </Link>
-      )}
+   <li class="round  my-1">
+     <div class="grid row d-flex align-items-center">
+       <div class="my-2 peek ">
+         <div class="d-flex">
+           <i className="fa fa-comment fa-flip-horizontal" style={{ color: "#229660" }}></i>
+           {user && (
+             <Link to={`/profile/${user.id}`}>
+               {" "}
+               <h6 class="mx-2 my-0 col">{props.user}</h6>
+             </Link>
+           )}
+         </div>
+         <p className="my-1">{props.comment}</p>
+         <div class="d-flex">
+           {stars.map((e, index) => (
+             <i key={index} className="fa fa-star" style={{ color: "#a7a700" }} />
+           ))}
+         </div>
+       </div>
      </div>
-     <p className="my-1">{props.comment}</p>
-     <div class="d-flex">
-      {stars.map((e) => (
-       <i className="fa fa-star" style={{ color: "#a7a700" }} />
-      ))}
-     </div>
-    </div>
-   </div>
-   <div>
-    {response
-     .filter((r) => r.rev_id === props.id)
-     .map((res) => (
-      <div className="res mx-4 my-2">
-       <Link to={`/profile/${users.find((u) => res.user === u.username)?.id}`}>
-        <h6 class="col">{res.user}</h6>
-       </Link>
+     <div>
+       {response
+         .filter((r) => r.rev_id === props.id)
+         .map((res) => (
+           <div key={res._id} className="res mx-4 my-2">
+             <Link to={`/profile/${users.find((u) => res.user === u.username)?.id}`}>
+               <h6 class="col">{res.user}</h6>
+             </Link>
 
-       {res.comment}
-      </div>
-     ))}
-   </div>
-   {currentUser &&
-    currentUser.userType === "Director" &&
-    props.det &&
-    !Repping && (
-     <button
-      class="btnx py-0 px-2 mx-4 float-end"
-      onClick={(e) => setRep(true)}
-     >
-      Reply
-     </button>
-    )}
-   {Repping && (
-    <div class="mx-4 my-2">
-     <hr />
-     <input
-      class="form-control my-2"
-      placeholder="Type reply..."
-      type="text"
-      onChange={(e) => setReply(e.target.value)}
-     ></input>{" "}
-     <button class="btnx py-0 px-2 float-end" onClick={(e) => setRep(false)}>
-      cancel
-     </button>
-     <button
-      class="btnx py-0 px-2 mx-2 float-end"
-      onClick={(e) => handleSave()}
-     >
-      save
-     </button>
-    </div>
-   )}
-  </li>
+             {res.comment}
+           </div>
+         ))}
+     </div>
+     {currentUser && currentUser.userType === "Director" && props.det && !Repping && (
+       <button class="btnx py-0 px-2 mx-4 float-end" onClick={(e) => setRep(true)}>
+         Reply
+       </button>
+     )}
+     {Repping && (
+       <div class="mx-4 my-2">
+         <hr />
+         <input
+           class="form-control my-2"
+           placeholder="Type reply..."
+           type="text"
+           onChange={(e) => setReply(e.target.value)}
+         ></input>{" "}
+         <button class="btnx py-0 px-2 float-end" onClick={(e) => setRep(false)}>
+           cancel
+         </button>
+         <button class="btnx py-0 px-2 mx-2 float-end" onClick={(e) => handleSave()}>
+           save
+         </button>
+       </div>
+     )}
+   </li>
  );
 }
 export default Review;
