@@ -1,0 +1,57 @@
+/* search results styling */
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.list-group {
+  padding: 10px;
+}
+
+.list-group .round {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.1s ease-in-out;
+}
+
+.list-group .round:hover {
+  transform: scale(1.02); 
+}
+
+.peek img {
+  border-radius: 5px;
+}
+
+.peek h6 {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.peek p {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.fa-chevron-right {
+  font-size: 24px;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.fa-chevron-right:hover {
+  color: #bff3c5; 
+}
+
+.titleCol {
+    width: 400px;
+}
